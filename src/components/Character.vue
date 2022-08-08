@@ -2,7 +2,7 @@
   <div>
     <div class="d-flex justify-center mb-1">
       <v-card v-if="!loading" width="374" class="pa-2">
-        <v-img height="250" :src="`${character[0].thumbnail.path}/${size}`">
+        <v-img height="250" :src="url">
           <v-container>
             <v-layout>
               <v-flex>
@@ -56,7 +56,7 @@
 <script>
 import { PUBLIC_KEY } from '@/api/marvel';
 import axios from 'axios';
-import { mapMutations, mapState } from 'vuex'
+import { mapState } from 'vuex'
 
 export default {
   name: 'Character',

@@ -1,6 +1,16 @@
 <template lang="html">
   <div>
+    <div class="d-flex justify-center mb-1">
+      <v-col>
+        <router-link :to="{ name: '/exercises' }">
+          <v-btn color="primary">
+            Other exercises
+          </v-btn>
+        </router-link>
+      </v-col>
+    </div>
     <v-container grid-list-md>
+
       <v-layout row wrap>
         <div v-for="character in characters">
           <v-flex xs12 sm10 md15>
